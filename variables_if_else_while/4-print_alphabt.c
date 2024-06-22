@@ -9,8 +9,12 @@ int main(void)
 {
 	char small;
 
-	for (small = 'a'; small <= 'z', small != 'q', 'e'; small++)
+	for (small = 'a'; small <= 'z'; small++)
 	{
+		if (small == 'q' && small == 'e')
+		{
+			continue;
+		}
 		putchar(small);
 	}
 	putchar('\n');
