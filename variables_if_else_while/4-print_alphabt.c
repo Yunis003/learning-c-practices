@@ -11,7 +11,7 @@ int main(void)
 
 	for (small = 'a'; small <= 'z'; small++)
 	{
-		if (small == 'q' && small == 'e')
+		if (small == 'q' || small == 'e')
 		{
 			continue;
 		}
