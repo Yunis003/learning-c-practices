@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	int num;
+	char num;
 
-	for (num = 1; num <= 10; num++)
+	for (num = '1'; num <= "10"; num++)
 	{
-		printf("num");
+		putchar(num);
 	}
-	printf('\n');
+	putchar('\n');
 
 	return (0);
 }
