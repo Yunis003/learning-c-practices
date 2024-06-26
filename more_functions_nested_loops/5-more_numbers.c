@@ -16,8 +16,8 @@ void more_numbers(void)
 		a++;
 		while (j <= 14)
 		{
-			_putchar(j);
 			j++;
+			_putchar(j);
 		}
 	}
 	_putchar('\n');
