@@ -2,7 +2,6 @@
 /**
  * for loop - function or entry point
  * @c: character that will be checked
- * Return: 0 or 1 depends on the case
  **/
 void print_numbers(void)
 {
