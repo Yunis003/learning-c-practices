@@ -10,7 +10,7 @@ void more_numbers(void)
 
 	while (a <= 10)
 	{
-		j = '0';
+		j = 0;
 
 		_putchar('\n');
 		a++;
