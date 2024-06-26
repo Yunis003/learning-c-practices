@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * for loop - function or entry point
+ * print_numbers(void) - function or entry point
  * @c: character that will be checked
  **/
 void print_numbers(void)
