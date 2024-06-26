@@ -1,8 +1,9 @@
 #include "main.h"
 /**
  * print_numbers - function or entry point
- * @c: character that will be checked
+ * Return: expected result
  **/
+
 void print_numbers(void)
 {
 	int a;
