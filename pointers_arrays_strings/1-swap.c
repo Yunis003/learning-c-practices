@@ -4,6 +4,8 @@
  **/
 void swap_int(int *a, int *b)
 {
-	*b = *a;
+	int c = *a;
+
 	*a = *b;
+	*b = c;
 }
