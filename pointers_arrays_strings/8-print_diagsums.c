@@ -5,7 +5,9 @@
 * the two diagonals of a squ are matrix of integers.
 * @a: array of integers
 * @size: size of an array
-**/void print_diagsums(int *a, int size)
+**/
+
+void print_diagsums(int *a, int size)
 {
 	int i;
 	int sum1 = 0;
