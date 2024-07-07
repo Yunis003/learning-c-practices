@@ -1,9 +1,11 @@
 #include "main.h"
 /**
- * factorial(int n) is the main function
- * n is the integer which is the must fin the integral
- * **/
-
+ * factorial - returns the factorial of a given number
+ * @n: The number to compute the factorial of
+ *
+ * Return: The factorial of the number
+ * or -1 if n is less than 0
+ */
 int factorial(int n)
 {
 	if (n < 0)
@@ -14,5 +16,5 @@ int factorial(int n)
 	{
 		return (1);
 	}
-	return (n * factorial(n-1));
+	return (n * factorial(n - 1));
 }
