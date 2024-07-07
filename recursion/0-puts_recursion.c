@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * _puts_recursion - is a function name 
- * s is the variable 
- * Return
- * **/
-
+ * _puts_recursion - function that prints a string
+ * @s: string that will be printed
+ **/
 void _puts_recursion(char *s)
 {
 	if (*s == '\0')
