@@ -8,17 +8,23 @@ Returns a pointer to the array, or NULL if it fails
 
 char *create_array(unsigned int size, char c)
 {
-	char arr[];
+	unsigned int i;
+	char *array;
 
+	
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	
-	for(c = 0x48; i <= size; i++)
+
+	array = malloc(size * sizeof(char));
+	if (array == NULL)
 	{
-		arr[] = c;
-	        return (0);
+		return (NULL);
 	}
-	return (0);
+	for (i = 0; i <= size; i++)
+	{
+		array[i] = c;
+	}
+	return (array);
 }
