@@ -19,4 +19,5 @@ char *_strdup(char *str)
 	}
 	newly = str;
 	return (newly);
+	free(newly);
 }
