@@ -7,8 +7,8 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int i, l;
 	char *newly;
+	unsigned int i, l;
 
 	if (str == NULL)
 	{
@@ -18,14 +18,14 @@ char *_strdup(char *str)
 	{
 		;
 	}
-	newly = malloc((l + 1) * sizeof(char));
+	newly = malloc(sizeof(char) * (l + 1));
 	if (newly == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i <= l; i++)
 	{
-		newly[i] = str[i];
+		newly[i] = str [i];
 	}
 	return (newly);
 }
