@@ -5,7 +5,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	unsigned char l, k, i;
+	unsigned char l, k, i1, i2;
 
 	if (s1 == NULL)
 	{
@@ -28,9 +28,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= l; i++)
+	for (i1 = 0; i1 <= l; i1++)
 	{
- 		concat[i] = s1[i] + s2[i];
+ 		concat[i1] = s1[i1];
+	}
+	for (i2 = 0; i2 <= k; i2++)
+	{
+		concat[i1 + i2] = s2[i2];
 	}
 	return (concat);
 }
