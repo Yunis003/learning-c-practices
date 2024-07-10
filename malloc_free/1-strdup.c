@@ -1,9 +1,10 @@
 #include <stdlib.h>
 /**
- * _strdup - is the function that
+ * _strdup - Duplicates a string.
+ * @str: The string to duplicate.
  *
- * @str - string that given
- * **/
+ * Return: Pointer to the duplicated string, or NULL if insufficient memory.
+ */
 char *_strdup(char *str)
 {
 	unsigned int i, l;
