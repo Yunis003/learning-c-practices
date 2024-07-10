@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * create_array is the array creater
- * Returns NULL if size = 0
-Returns a pointer to the array, or NULL if it fails
+ * create_array is the function that create an array
+ * @size is the given size
+ * @c is the value 
  * **/
 
 char *create_array(unsigned int size, char c)
