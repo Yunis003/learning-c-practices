@@ -6,11 +6,17 @@
  * **/
 char *_strdup(char *str)
 {
-	str = malloc(sizeof(char));
+	char *newly;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	return (str);
-	free(str);
+	newly = malloc(sizeof(char));
+	if (newly == NULL)
+	{
+		return (NULL);
+	}
+	newly = str;
+	return (newly);
 }
