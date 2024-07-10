@@ -6,21 +6,25 @@
  * **/
 char *_strdup(char *str)
 {
+	unsigned int i, l;
 	char *newly;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	newly = malloc(sizeof(char));
+	for (l = 0; str[l] != '\0'; l++)
+	{
+		;
+	}
+	newly = malloc((l+1) * sizeof(char));
 	if (newly == NULL)
 	{
 		return (NULL);
 	}
-	else
+	for (i = 0; i <= l; i++)
 	{
-		newly = str;
+		newly[i] = str[i];
 	}
 	return (newly);
-	free(newly);
 }
