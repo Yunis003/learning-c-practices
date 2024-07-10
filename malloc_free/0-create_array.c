@@ -2,8 +2,11 @@
 #include <stdlib.h>
 /**
  * create_array is the function that create an array
- * @size is the given size
- * @c is the value 
+ *
+ * @size is the array size
+ * @c Character to initialize to array
+ *
+ * Return: Pointer to the allocated array, or NULL if size is 0 or on failure. 
  * **/
 
 char *create_array(unsigned int size, char c)
