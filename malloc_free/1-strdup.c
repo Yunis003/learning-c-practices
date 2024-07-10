@@ -17,7 +17,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	newly = str;
+	else
+	{
+		newly = str;
+	}
 	return (newly);
 	free(newly);
 }
