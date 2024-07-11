@@ -1,3 +1,5 @@
+#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * str_concat - Concatenates two strings.
@@ -20,11 +22,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	for (l = 0; *s1 != '\0'; l++)
+	for (l = 0; s1[l] != '\0'; l++)
 	{
 		;
 	}
-	for (k = 0; *s2 != '\0'; k++)
+	for (k = 0; s2[k] != '\0'; k++)
 	{
 		;
 	}
@@ -33,13 +35,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (first = 0; first <= l; first++)
+	for (first = 0; first < l; first++)
 	{
 		concat[first] = s1[first];
 	}
-	for (second = 0; second <= k; second++)
+	for (second = 0; second < k; second++)
 	{
 		concat[first + second] = s2[second];
 	}
+	concat[first + second] = '\0';
 	return (concat);
 }
