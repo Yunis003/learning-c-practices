@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
 /**
  * alloc_grid - allocates memory for a 2D array of integers
  * @width: width of the grid
@@ -9,25 +11,29 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int *matris;
-	int l, k, i, j;
+	int i, j, **array;
 
-	for (l = 0; l <= width; l++)
+	if (width <= 0 || height <= 0)
 	{
-		;
+		return (NULL);
 	}
-	for (k = 0; k <= height; k++)
+	array = malloc(sizeof(int) * height);
+	if (array == NULL)
 	{
-		;
+		return (NULL);
 	}
-	matris = malloc(sizeof(int) * (l + k + 1));
-	for (i = 0; i <= l; i++)
+	for (i = 0; i <= height; i++)
 	{
-		matris[i] = width[i];
+		array[i] = malloc(sizeof(int) * width);
+		if (array[i] == NULL)
+		{
+			free(array);
+			return (NULL);
+		}
+		for (j = 0; j <= width; j++)
+		{
+			array[i][j] = 0;
+		}
 	}
-	for (j = 0; j <= k; j++)
-	{
-		matris[i + j] = width[j];
-	}
-	return (matris);
+	return (array);
 }
