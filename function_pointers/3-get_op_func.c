@@ -1,4 +1,4 @@
-include "3-calc.h"
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -19,4 +19,10 @@ int (*get_op_func(char *s))(int, int)
         {NULL, NULL}
     };
     int i = 0;
+
+    while (ops[i].op != NULL && *(ops[i].op) != *s)
+	{
+		i++;
+	}
+	return (ops[i].f);
 }
