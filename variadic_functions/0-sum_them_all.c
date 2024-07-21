@@ -20,12 +20,11 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		return (0);
 	}
+
 	for (i = 0; i < n; i++)
 	{
-		int x = va_arg(args, int);
-		sum += x;
+		sum += va_arg(args, int);
 	}
 	va_end(args);
-
 	return (sum);
 }

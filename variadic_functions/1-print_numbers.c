@@ -1,6 +1,7 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
+
 /**
  * print_numbers - function that print numbers
  * @separator: the string to be printed between numbers
@@ -19,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator != NULL && i < n - 1)
 		{
 			printf("%s", separator);
-		}		
+		}
 	}
 	va_end(args);
 	printf("\n");
