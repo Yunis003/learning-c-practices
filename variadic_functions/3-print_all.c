@@ -71,10 +71,10 @@ void print_all(const char * const format, ...)
 				types[j].f(args);
 				separator = ", ";
 			}
-			j++;
+			++j;
 		}
 		j = 0;
-		i++;
+		++i;
 	}
 	va_end(args);
 	printf("\n");
