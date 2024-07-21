@@ -7,7 +7,7 @@
 typedef struct print 
 {
 	char *type;
-	void (*f)(va_list args);
+	void (*f)(va_list ap);
 }print_type;
 
 

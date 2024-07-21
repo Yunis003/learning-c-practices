@@ -5,33 +5,33 @@
  * print_char - prints characters
  * @ap: argument pointer
  **/
-void print_char(va_list args)
+void print_char(va_list ap)
 {
-	printf("%c", va_arg(args, int));
+	printf("%c", va_arg(ap, int));
 }
 /**
  * print_float - prints float
  * @ap: argument pointer
  **/
-void print_float(va_list args)
+void print_float(va_list ap)
 {
-	printf("%f", va_arg(args, double));
+	printf("%f", va_arg(ap, double));
 }
 /**
  * print_int - prints integer
  * @ap: argument pointer
  **/
-void print_int(va_list args)
+void print_int(va_list ap)
 {
-	printf("%d", va_arg(args, int));
+	printf("%d", va_arg(ap, int));
 }
 /**
  * print_string - prints string
  * @ap: argument pointer
  **/
-void print_string(va_list args)
+void print_string(va_list ap)
 {
-	char *str = va_arg(args, char *);
+	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
 	{
@@ -54,12 +54,12 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_list(args);
+	va_list(ap);
 	char *separator = "";
 	int i = 0;
 	int j = 0;
 
-	va_start(args, format);
+	va_start(ap, format);
 
 	while (format && format[i])
 	{
@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 			if (*types[j].type == format[i])
 			{
 				printf("%s", separator);
-				types[j].f(args);
+				types[j].f(ap);
 				separator = ", ";
 			}
 			++j;
@@ -76,6 +76,6 @@ void print_all(const char * const format, ...)
 		j = 0;
 		++i;
 	}
-	va_end(args);
+	va_end(ap);
 	printf("\n");
 }
