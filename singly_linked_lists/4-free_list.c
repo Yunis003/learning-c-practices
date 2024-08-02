@@ -13,7 +13,7 @@ void free_list(list_t *head)
 
 	while (new_node != NULL)
 	{
-		(*new_node).next = converter;
+		new_node = (*converter).next;
 		free((*new_node).str);
 		free(new_node);
 		converter = new_node;
