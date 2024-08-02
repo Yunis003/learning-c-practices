@@ -7,15 +7,14 @@
  **/
 void free_list(list_t *head)
 {
-	list_t *new_node;
+	list_t *new_node = head;
 	list_t *converter;
-	new_node = head;
 
 	while (new_node != NULL)
 	{
-		new_node = (*converter).next;
+		converter = (*new_node).next;
 		free((*new_node).str);
 		free(new_node);
-		converter = new_node;
+		new_node = converter;
 	}
 }
