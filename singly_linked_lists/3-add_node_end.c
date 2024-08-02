@@ -1,7 +1,7 @@
 #include "lists.h"
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 #include <string.h>
 /**
  * add_node_end - adds a new node at the end of a list_t list
@@ -11,30 +11,31 @@
  **/
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *node_end;
+	list_t *new_node;
 	list_t *final;
-	
-	node_end = malloc(sizeof(list_t));
-	if (node_end == NULL)
+
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
-	(*node_end).str = strdup(str);
-	if ((*node_end).str == NULL)
+
+	(*new_node).str = strdup(str);
+	if ((*new_node).str == NULL)
 	{
-		free(node_end);
+		free(new_node);
 		return (NULL);
 	}
-	(*node_end).len = 0;
-	while (str[(*node_end).len] != '\0')
+	(*new_node).len = 0;
+	while (str[(*new_node).len] != '\0')
 	{
-		(*node_end).len++;
+		(*new_node).len++;
 	}
-	node_end->next = NULL;
+	new_node->next = NULL;
 	if (*head == NULL)
 	{
-		*head = node_end;
-		return (node_end);
+		*head = new_node;
+		return (new_node);
 	}
 	else
 	{
@@ -44,7 +45,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			final = (*final).next;
 		}
 
-	(*final).next = node_end;
+	(*final).next = new_node;
 	}
-	return (node_end);
+	return (new_node);
 }
