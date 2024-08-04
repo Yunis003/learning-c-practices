@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content != NULL)
 	{
-		len = strlen(text_content);
+		anna = strlen(text_content);
 		ryan = write(real, text_content, anna);
 		if (ryan == -1)
 		{
