@@ -1,10 +1,4 @@
 #include "main.h"
-/**
- * is_prime_number - function checks for the number is prime or not
- * Return: 1 or zero depends on the case
- * @n: number to be checked
- * @i: divisor
- **/
 int divisor(int n, int i);
 
 int is_prime_number(int n)
@@ -18,12 +12,7 @@ int is_prime_number(int n)
 		return (divisor(n, 2));
 	}
 }
-/**
- * divisor - helper function for checking number
- * Return: 1, 0 or divisor number
- * @n: number to be checked
- * @i: divisor
- **/
+
 int divisor(int n, int i)
 {
 	if (i >= n)
