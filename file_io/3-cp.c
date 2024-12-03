@@ -7,12 +7,6 @@
 #include <errno.h>
 
 #define BUFFER_SIZE 1024
-/**
- * main - copy text to file from other file
- * @argc: count of arguments
- * @argv: arguments array
- * Return: Always 0 success.
- **/
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
